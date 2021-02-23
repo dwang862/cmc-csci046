@@ -63,7 +63,8 @@
    | `check_palindrome_2`   |       |        |         |
 
    **HINT:**
-   The run times for indexing into a string are the same as those for indexing a list.
+   The runtimes for indexing into a string are the same as those for indexing a list, which is O(1).
+   The runtime for indexing into a deque is O(n).
 
    **HINT:**
    One of these entries should be asymptotically larger than the others.
@@ -75,7 +76,7 @@
    ```
    where `SETUP_CODE` is a code snippet that defines some variables, and `CODE_TO_TIME` is a code snippet that will get run 1000000 times in order to determine how fast the code is.
 
-   For example, in order to measure the runtime of the `check_palindrome_1` function on a lest and deque of length 5, we could run the commands:
+   For example, in order to measure the runtime of the `check_palindrome_1` function on a list and deque of length 5, we could run the commands:
    ```
    $ python3 -m timeit -s 'import palindrome; xs=[1,2,3,2,1]' 'palindrome.check_palindrome_1(xs)'
    $ python3 -m timeit -s 'import palindrome; from collections import deque; xs=deque([1,2,3,2,1])' 'palindrome.check_palindrome_1(xs)'
@@ -91,9 +92,9 @@
    $ python3 -m timeit -s 'import palindrome; from collections import deque; xs=deque([1]*100000)' 'palindrome.check_palindrome_1(xs)'
    ```
 
-   Complete the following table with actual measured runtimes by substituting the values for `x` and the function in the command above.
+   Complete the following table with actual measured runtimes by substituting the values for `xs` and the function in the command above.
 
-   |                        | `x=("1"*100000)` | `x=([1]*100000)` | `x=deque([1]*100000)` |
+   |                        | `xs=("1"*100000)` | `xs=([1]*100000)` | `xs=deque([1]*100000)` |
    | ---------------------- | ---------------- | ---------------- | --------------------- |
    | `check_palindrome_1`   |                  |                  |                       |
    | `check_palindrome_2`   |                  |                  |                       |
